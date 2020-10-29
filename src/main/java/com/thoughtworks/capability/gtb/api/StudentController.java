@@ -13,6 +13,8 @@ import java.util.List;
 @CrossOrigin
 public class StudentController {
 
+  // TODO GTB-知识点: - 推荐使用构造器注入
+  // TODO GTB-工程实践: - 违反了封装性，字段应该使用private
   @Autowired
   Students students;
 
@@ -21,6 +23,8 @@ public class StudentController {
     return students.getAllStudents();
   }
 
+  // TODO GTB-知识点: - 违反Restful实践, url不合理
+  // TODO GTB-知识点: - 违反Restful实践, GET请求成功后应该返回数据
   @GetMapping("/group")
   public void getRandomStudentGroup(){
     students.getRandomStudentGroup();
